@@ -1,0 +1,37 @@
+{
+  "name": "socketproxy",
+  "version": "0.0.1-alpha-1",
+  "description": "Socket proxy for Windows and Unix",
+  "keywords": ["socket", "proxy", "server", "network", "cli"],
+  "preferGlobal": true,
+  "homepage": "http://github.com/minibikini/socketproxy",
+  "bugs": {
+      "url": "http://github.com/minibikini/socketproxy/issues",
+      "email": "egor@kislitsyn.com"
+    },
+  "licenses": [{
+    "type": "MIT",
+    "url": "http://github.com/minibikini/socketproxy/raw/master/LICENSE"
+  }],
+  "author": {
+    "name": "Egor Kislitsyn",
+    "email": "egor@kislitsyn.com",
+    "url": "http://kislitsyn.com/"
+  },
+  "bin": {
+    "socketproxy": "./bin/socketproxy"
+  },  
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/minibikini/socketproxy.git"
+  },
+  "main": "./index",
+  "engines": {
+    "node": "0.6.x"
+  },
+  "dependencies": {
+    "coffee-script": ">=1.3.1",
+    "commander": ">=0.6.0",
+    "winston": ">=0.5.11"
+  }
+}
