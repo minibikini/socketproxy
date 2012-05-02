@@ -5,7 +5,6 @@ logger = null
 module.exports = class SocketProxy
   constructor: (@config, loggerInstanse = console)->
     logger = loggerInstanse
-    # logger.debug 'Config: ', @config
     @proxy rule for rule in @config.rules
 
   proxy: (rule) ->
