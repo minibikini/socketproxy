@@ -6,7 +6,7 @@ SocketProxy - is a simple (for the moment) port mapper software.
  1. [Install Node.js](http://nodejs.org/#download)
  2. `$ npm install -g socketproxy`
 
-## Fetures
+## Features
  * Easy configuration
  * Cross-platform (works on Windows too!)
 
