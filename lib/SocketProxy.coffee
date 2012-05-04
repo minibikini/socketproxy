@@ -13,7 +13,7 @@ module.exports = class SocketProxy
     
     server = net.createServer (conn)->
       conn.pause()
-      clientName = "#{conn.remoteAddress}:#{conn.remotePort}"
+      clientName = "#{conn.remoteAddress}"
       
       logger.info "#{clientName} connected to #{sourceName}"
       
@@ -26,8 +26,8 @@ module.exports = class SocketProxy
       conn.on 'error', (err) ->
         dest.end()
         switch err.code 
-          when 'ECONNREST'
-            logger.error "ECONNREST: #{clientName} to #{destName} via #{sourceName}"
+          when 'ECONNRESET'
+            logger.error "Connection reset: #{clientName} to #{destName} via #{sourceName}"
           else logger.error "Unknown error: ", err        
 
       dest.on 'error', (err)-> 
