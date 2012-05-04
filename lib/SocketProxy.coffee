@@ -23,7 +23,13 @@ module.exports = class SocketProxy
         conn.resume()
       
       conn.on 'end', -> logger.info "#{clientName} disconnected from #{sourceName}"
-      
+      conn.on 'error', (err) ->
+        dest.end()
+        switch err.code 
+          when 'ECONNREST'
+            logger.error "ECONNREST: #{clientName} to #{destName} via #{sourceName}"
+          else logger.error "Unknown error: ", err        
+
       dest.on 'error', (err)-> 
         conn.end()
         switch err.code 
