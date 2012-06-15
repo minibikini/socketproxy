@@ -1,3 +1,5 @@
+process.title = 'SocketProxy'
+
 pkg = require '../package'
 cli = require 'commander'
 path = require 'path'
@@ -21,6 +23,7 @@ try
   config = require configPath
 catch error
   console.log "Can't locate config file at #{configPath}"
+  console.log "Run 'socketproxy -h' to see available argument options"
   process.exit 1
 
 logger.addConsole() unless cli.quiet
