@@ -1,6 +1,6 @@
 {
   "name": "socketproxy",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "description": "Socket proxy for Windows and Unix",
   "keywords": ["socket", "proxy", "server", "network", "cli"],
   "preferGlobal": true,
@@ -27,7 +27,7 @@
   },
   "main": "./index",
   "engines": {
-    "node": "0.6.x"
+    "node": "*"
   },
   "dependencies": {
     "coffee-script": ">=1.3.1",
