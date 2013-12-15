@@ -1,6 +1,6 @@
 {
   "name": "socketproxy",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Socket proxy for Windows and Unix",
   "keywords": ["socket", "proxy", "server", "network", "cli"],
   "preferGlobal": true,
@@ -18,6 +18,12 @@
     "email": "egor@kislitsyn.com",
     "url": "http://kislitsyn.com/"
   },
+  "contributors": [
+    {
+      "name": "Deonis Peretyagin",
+      "email": "karudo@gmail.com"
+    }
+  ],
   "bin": {
     "socketproxy": "./bin/socketproxy"
   },  
