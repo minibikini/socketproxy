@@ -11,11 +11,13 @@ SocketProxy - is a simple (for the moment) port mapper software.
  * Cross-platform (works on Windows too!)
 
 ## Quick Start
+`$ socketproxy -s 192.168.1.2:5001 -d google.com:80` 
+
 `$ socketproxy -c path/to/config[.json/.js/.coffee]` 
 
 See `$ socketproxy --help` for all available options.
 
-## Config Example
+## Config file Example
 ```json
 {
   "rules": [
